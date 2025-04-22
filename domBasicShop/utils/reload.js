@@ -1,6 +1,8 @@
 const main = document.querySelector('main')
 const span =  document.querySelector('span')
 const buttons = document.querySelectorAll('.buttons button')
+const products = document.querySelector('.product')
+
 
 
 let favoritesCount = 0
@@ -69,6 +71,14 @@ function draw(array) {
                 button.style.backgroundColor = 'white'
                 button.style.color = 'black'
                 button.innerHTML = 'В избранное'
+            }
+
+            if (favoritesCount === 1) {
+                products.innerHTML = 'товар';
+            } else if (favoritesCount >= 2 && favoritesCount <= 4) {
+                products.innerHTML = 'товара';
+            } else {
+                products.innerHTML = 'товаров';
             }
         })
     }
