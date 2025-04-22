@@ -14,6 +14,11 @@ button {
     height: 55px;
     font-size: 18px;
     font-weight: 500;
+    transition: .2s ease;
+}
+
+button:hover {
+    transform: translateY(-5px);
 }
 
 header {
@@ -26,6 +31,10 @@ header {
     .buttons {
         display: flex;
         gap: 8px;
+
+        button:active {
+            background-color: rgb(159, 159, 159);
+        }
     }
 }
 
