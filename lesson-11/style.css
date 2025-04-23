@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    h1 {
+        color: #000000;
+        font-weight: 600;
+    }
+
+    text-align: center;
+    margin-top: 40px;
+}
+
+#btn1 {
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 40px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    transition: ease-in 0.1s;
+    color: #000000;
+    font-weight: 600;
+}
+
+#btn1:hover {
+    background-color: rgb(216, 209, 209);
+    transform: translateY(-5px);
+}
+
+#btn1:active {
+    transform: translateY(3px);
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000000;
+    max-height: 450px;
+    min-height: 350px;
+}
+
+.container {
+    padding: 50px 50px 50px 50px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.photo {
+    width: 100%;
+    height: 30%;
+    object-fit: contain;
+}
+
+.info {
+    background-color: black;
+    width: 100%;
+    height: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h3 {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.desc {
+    color: #FFFFFF8F;
+    font-size: 12px;
+}
+
+.details {
+    display: flex;
+    gap: 5px;
+}
+
+.price {
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+}
+
+.priceVal {
+    color: white;
+}
+
+.rate {
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+}
+
+.rateVal {
+    font-size: 20px;
+    color: white;
+}
+
+.buys {
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+}
+
+.quantity {
+    color: white;
+    width: 30px;
+
+}
+
+.size {
+    height: 20px;
+}
+
+.btn {
+    transform: translateY(-2px);
+}
+
+.chosen {
+    padding: 10px;
+    width: 100%;
+    border: none;
+}
+
+.chosen {
+    cursor: pointer;
+    color: #000000;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.active {
+    background-color: #007BFF;
+    color: white;
+}
+
+.basket {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 50px;
+}
