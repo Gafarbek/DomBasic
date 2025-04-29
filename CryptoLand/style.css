@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+html {
+    transform: scale(0.9);
+    transform-origin: top left;
+    width: 111%;
+    height: 111%;
+}
+
+
+button {
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 612px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 173px;
+    padding: 50px 140px 340px;
+    background-color: #003FDB;
+    
+    
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 40px;
+        }
+    
+        .logo {
+            display: flex;
+            gap: 21px;
+            align-items: center;
+            
+            h2 {
+                font-weight: 500;
+            }
+        }
+    }
+
+    .head {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 50px;
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            color: white;
+            h1 {
+                font-size: 100px;
+                font-weight: 700;
+            }
+    
+            p {
+                font-size: 22px;
+                font-weight: 400;
+            }
+        }
+
+        form {
+            display: flex;
+            padding: 6px 7px 6px 30px;
+            justify-content: space-between;
+            border-radius: 100px;
+            background-color: white;
+            width: 640px;
+            height: 72px;
+
+            input {
+                border: none;
+                background: none;
+            }
+        }
+    }
+    .dashboard {
+        display: grid;
+        position: absolute;
+        transform: translateY(750px);
+        padding: 38px 30px;
+        border: 15px solid #003FDB;
+        border-radius: 20px;
+        background-color: white;
+        gap: 20px;
+
+        p {
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        .totalGrid {
+            display: grid;
+            justify-content: center;
+            gap: 27px;
+            grid-template-columns: repeat(3, 475px);
+            grid-template-rows: repeat(1, 180px);
+
+            .total {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                column-gap: 98px;
+                border-radius: 20px;
+                border: 1px solid #D8D8D8;
+
+                .textInfo {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 36px;
+
+                    h2 {
+                        font-weight: 400;
+                        font-size: 56px;
+                    }
+                }
+
+                .grafik {
+                    display: flex;
+                    align-items: end;
+                    flex-direction: column;
+                    row-gap: 53px;
+
+                    h5 {
+                        font-weight: 600;
+                        font-size: 14px;
+                    }
+
+                }
+            }
+        }
+
+        .bg {
+            display: flex;
+            gap: 23px;
+
+            
+            .balance {
+                display: grid;
+                row-gap: 9px;
+                border: 1px solid #D8D8D8;
+                border-radius: 20px;
+                padding: 21px 25px 15px;
+                h2 {
+                    font-weight: 400;
+                    font-size: 44px;
+                }
+
+                .per {
+                    p {
+                        font-size: 12px;
+                    }
+                }
+
+                .totalBalance {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 9px;
+                    padding-bottom: 29px;
+                    border-bottom: 1px solid #D8D8D8;
+                }
+
+                .totalExpense {
+                    display: flex;
+                    column-gap: 68px;
+                    border-bottom: 1px solid #D8D8D8;
+                    padding: 20px 0px;
+
+                    .baseInfo {
+                        display: grid;
+                        row-gap: 9px;
+                    }
+                }
+
+                .totalExpense:nth-child(3) {border: none;}
+            }
+
+            .salesView {
+                display: flex;
+                flex-direction: column;
+                row-gap: 124px;
+                border: 1px solid #D8D8D8;
+                border-radius: 20px;
+                padding: 21px 23px 47px;
+
+                .spend {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .daily {
+                        display: flex;
+                        gap: 30px;
+                        
+                    }
+                }
+
+                .box {
+                    display: flex;
+                    gap: 38px;
+
+                    h5 {
+                        font-weight: 400;
+                        font-size: 10px;
+                        color: #707070;
+                        
+                    }
+
+                    .num {
+                        display: grid;
+                        gap: 27px;
+                        transform: translateY(20px);
+                    }
+                    
+
+                    .vector {
+                        display: flex;
+                        background-image: url(./images/graph\ bg.png);
+                        background-size: 100%;
+                        width: 806px;
+                        height: 220px;
+
+                        img {
+                            position: absolute;
+                            transform: translateY(-80px);
+                        }
+                        
+                        .am {
+                            display: flex;
+                            align-items: flex-end;
+                            translate: 50px 30px;
+                            column-gap: 20px;
+                        }
+                    }
+                }
+            }
+            .totalEmployee {
+                display: grid;
+                grid-template-rows: repeat(3, 1fr);
+
+                .employee{
+                    display: grid;
+                    row-gap: 18px;
+                    .strip {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 14px;
+                        .greenStrip {
+                            background: #A3DC2F99;
+                            width: 141px;
+                            height: 14px;
+                            border-radius: 7px;
+                        }
+        
+                        .whiteStrip {
+                            background: #F6F6F6;
+                            width: 280px;
+                            height: 14px;
+                            border-radius: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h3 {
+        font-size: 56px;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 72px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+    .logofolio {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 54px;
+
+        .rectangle {
+            display: flex;
+            justify-content: center;
+            gap: 59px;
+            padding: 80px 91px 89px 84px;
+            background-color: black;
+        }
+    }
+    .features {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-top: 160px;
+        background-color: #F8F8F8;
+
+        h2 {
+            padding-bottom: 188px;
+        }
+
+        .bodyA {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            row-gap: 188px;
+
+            .groupA {
+                display: flex;
+                text-align: start;
+                column-gap: 201px;
+
+                .rightSIde {
+                    
+                    height: 612px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-image: url(images/Group\ 299.png);
+                    background-position: 200px 320px;
+                    background-repeat: no-repeat;
+                }
+
+                .management {
+                    display: flex;
+                    row-gap: 30px;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    button {align-self: flex-start;}
+                }
+            }
+        }
+    }
+    .customerts {
+        display: grid;
+        gap: 59px;
+        padding: 100px 140px;
+        background-color: black;
+        color: white;
+
+        .frame {
+            display: grid;
+            gap: 25px;
+        }
+
+        .founder {
+            display: flex;
+            gap: 39px;
+
+            .person {
+                display: grid;
+                text-align: start;
+                gap: 39px;
+
+                .info {
+                    display: grid;
+                    gap: 8px;
+                    h2 {
+                        font-size: 30px;
+                        font-weight: 400;
+                    }
+    
+                    p {
+                        font-size: 20px;
+                        font-weight: 400;
+                        color: #65676C;
+                    }
+                }
+            }
+        }
+    }
+    .pricing {
+        display: grid;
+        gap: 55px;
+        background: #F2F4F5;
+        padding: 120px 328px;
+
+        .priceForService {
+            display: grid;
+            justify-content: center;
+            gap: 50px;
+            grid-template-columns: repeat(3, 388px);
+            grid-template-rows: repeat(1, 1044px);
+            
+            .block, .blockA {
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                justify-content: space-between;
+                padding: 44px;
+                border-radius: 31px;
+                background-color: white;
+
+                .blockTitle {
+                    display: grid;
+                    gap: 35px;
+                }
+
+                .titleButton, .lowButton {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                h3 {
+                    font-size: 30px;
+                    font-weight: 400;
+                }
+
+                h2 {
+                    font-size: 60px;
+                    font-weight: 400;
+                }
+
+                p {color: #65676C;}
+            }
+        }
+    }
+    .testimonials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #F2F4F5;
+        gap: 46px;
+
+        .testTitle {
+            display: grid;
+            gap: 30px;
+        }
+
+        .comments {
+            display: grid;
+            grid-template-columns: repeat(3, 523px);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 35px;
+            text-align: start;
+            padding-bottom: 102px;
+
+            .commentBlock {
+                display: grid;
+                gap: 77px;
+                background-color: white;
+                border-radius: 16px;
+                padding: 40px;
+
+                p {color: #707070;}
+
+                .user {
+                    display: flex;
+
+                    img {
+                        width: 60px;
+                        height: 60px;
+                    }
+    
+                    .userInfo {
+                        display: flex;
+                        flex-direction: column;
+    
+                        h3 {
+                            font-size: 26px;
+                            font-weight: 400;
+                        }
+
+                        img {
+                            width: 77px;
+                            height: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .baseCta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: start;
+        
+        .cta {
+            padding: 19px;
+            display: flex;
+            color: white;
+            background-color: #003FDB;
+            border-radius: 40px;
+            transform: translateY(300px);
+
+            .ctaInfo {
+                display: flex;
+                flex-direction: column;
+                gap: 43px;
+                padding: 120px 237px 43px 79px;
+
+            }
+            .ctaButton {
+                display: flex;
+                gap: 43px;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    
+    .description {
+        display: flex;
+        gap: 264px;
+        padding: 197px 140px;
+
+        .leftSide {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            .logo {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+        }
+        
+        .links {
+            display: flex;
+            gap: 112px;
+            .plateform {
+                display: flex;
+                gap: 41px;
+                flex-direction: column;
+                
+                h2 {
+                    font-weight: 600;
+                }
+
+                a {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
